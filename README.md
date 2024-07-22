@@ -24,7 +24,7 @@
 
 如果要替換為自己的時期1與時期2的資料集，請由 `main.ipynb` 中的 `image_dir1` 與 `image_dir2` 載入
 
-本次訓練資料集拆成 8:2 用於 訓練:驗證
+本次訓練資料集拆成 8 : 2 用於 訓練 : 驗證
 
 ---
 
@@ -53,6 +53,20 @@ Epoch 150: val_loss did not improve from 0.05955
 28/28 [==============================] - 2s 58ms/step - loss: 0.0534 - accuracy: 0.9509 - precision: 0.9455 - recall: 0.9546 - f1_score: 0.9468 - val_loss: 0.0710 - val_accuracy: 0.9018 - val_precision: 0.9050 - val_recall: 0.9206 - val_f1_score: 0.9082
 
 ![指標](image/1.png)
+
+在 `test.ipynb` 中可以看到以下指標，用來測試訓練好的模型在自己或其他資料集表現，一樣是把  `test.ipynb` 內 `image_dir1` 與 `image_dir2` 修改為想測試的資料集。
+
+DET 曲線與 EER(%)：
+
+![DET](image/5.png)
+
+真偽用戶距離分布圖：
+
+![距離分布圖](image/6.png)
+
+有多少真偽用戶被正確跟錯誤分類：
+
+![矩陣](image/7.png)
 
 ---
 
