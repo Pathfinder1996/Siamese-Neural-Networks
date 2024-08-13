@@ -30,7 +30,7 @@ def contrastive_loss(y_true, y_pred, margin=1.0):
     y_true = tf.cast(y_true, tf.float32)
     square_pred = tf.square(y_pred) + 1e-6
     margin_square = tf.square(tf.maximum(margin - y_pred, 0))
-    loss = tf.reduce_mean((1 - y_true) * square_pred + y_true * margin_square)
+    loss = tf.reduce_mean((1 - y_true) * 0.5 * square_pred + y_true * 0.5 * margin_square)
     return loss
 
 class EuclideanDistance(Layer):
