@@ -11,7 +11,9 @@
 
 2. 程式碼建立的部分參考: [Siamese network with Keras, TensorFlow, and Deep Learning](https://pyimagesearch.com/2020/11/30/siamese-networks-with-keras-tensorflow-and-deep-learning/)
 
-3. 模型訓練指標定義參考: Stack overflow
+3. 損失函數: [Dimensionality Reduction by Learning an Invariant Mapping](https://ieeexplore.ieee.org/document/1640964)
+
+4. 模型訓練指標定義參考: Stack overflow
 
 ---
 
@@ -38,13 +40,15 @@
 
 ## 模型架構
 
-主網路：
+主網路與子網路：
 
-![主網路](image/3.png)
+image資料夾內的 圖3(主架構) 跟圖4(子網路)
 
-子網路：
+---
 
-![子網路](image/4.png)
+## 損失函數 - 對比損失
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>Y</mi><mo stretchy="false">)</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">(</mo><msub><mi>D</mi><mrow><mi>w</mi></mrow></msub><msup><mo stretchy="false">)</mo><mrow><mn>2</mn></mrow></msup><mo>+</mo><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow data-mjx-texclass="INNER"><mo data-mjx-texclass="OPEN">{</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>m</mi><mo>−</mo><msub><mi>D</mi><mrow><mi>w</mi></mrow></msub><mo stretchy="false">)</mo><mo data-mjx-texclass="CLOSE">}</mo></mrow><mrow><mn>2</mn></mrow></msup></math>
 
 ---
 
