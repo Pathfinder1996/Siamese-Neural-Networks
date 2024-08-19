@@ -59,8 +59,8 @@ image資料夾內的 圖3(主架構) 跟圖4(子網路)
 ---
 
 ## 訓練結果
-Epoch 150: val_loss did not improve from 0.05955
-28/28 [==============================] - 2s 58ms/step - loss: 0.0534 - accuracy: 0.9509 - precision: 0.9455 - recall: 0.9546 - f1_score: 0.9468 - val_loss: 0.0710 - val_accuracy: 0.9018 - val_precision: 0.9050 - val_recall: 0.9206 - val_f1_score: 0.9082
+Epoch 100: val_loss did not improve from 0.02720
+32/32 [==============================] - 4s 110ms/step - loss: 0.0264 - accuracy: 0.9785 - precision: 0.9720 - recall: 0.9850 - f1_score: 0.9773 - val_loss: 0.0278 - val_accuracy: 0.9688 - val_precision: 0.9449 - val_recall: 1.0000 - val_f1_score: 0.9707
 
 ![指標](image/1.png)
 
