@@ -32,7 +32,7 @@
 
 ## 訓練標籤製作與視覺化
 
-在 `data_loader.py` 中，正對是將同個人不同時期的影像組合在一起，並標示為1(表示同一人)，負對則組合不同人的影像並標示為0(表示不同人)
+在 `data_loader.py` 中，正對是將同個人不同時期的影像組合在一起，並標示為0(表示同一人)，負對則組合不同人的影像並標示為1(表示不同人)
 
 隨機取幾組正負對視覺化在 `labels_visualization.ipynb`，視覺化時pos表同一人，neg表不同人，如下圖：
 
@@ -46,9 +46,9 @@ image資料夾內的 圖3(主架構) 跟圖4(子網路)
 
 ---
 
-## 損失函數 - 變體對比損失
+## 損失函數 - 對比損失公式
 
-![損失函數](image/8.png)
+![損失函數](image/10.jpg)
 
 ---
 
@@ -59,24 +59,29 @@ image資料夾內的 圖3(主架構) 跟圖4(子網路)
 ---
 
 ## 訓練結果
-Epoch 100: val_loss did not improve from 0.02720
-32/32 [==============================] - 4s 110ms/step - loss: 0.0264 - accuracy: 0.9785 - precision: 0.9720 - recall: 0.9850 - f1_score: 0.9773 - val_loss: 0.0278 - val_accuracy: 0.9688 - val_precision: 0.9449 - val_recall: 1.0000 - val_f1_score: 0.9707
+Epoch 100/100
+32/32 [==============================] - ETA: 0s - loss: 0.0204 - accuracy: 0.9863 - precision: 0.9969 - recall: 0.9786 - f1_score: 0.9870
+Epoch 100: val_loss improved from 0.02339 to 0.02318, saving model to snn.hdf5
+32/32 [==============================] - 4s 118ms/step - loss: 0.0204 - accuracy: 0.9863 - precision: 0.9969 - recall: 0.9786 - f1_score: 0.9870 - val_loss: 0.0232 - val_accuracy: 0.9766 - val_precision: 1.0000 - val_recall: 0.9437 - val_f1_score: 0.9693
+
 
 ![指標](image/1.png)
 
 在 `test.ipynb` 中可以看到以下指標，用來測試訓練好的模型在自己或其他資料集表現，一樣是把  `test.ipynb` 內 `image_dir1` 與 `image_dir2` 修改為想測試的資料集。
 
-DET 曲線與 EER(%)：
+DET, ROC 曲線與 EER：
 
 ![DET](image/5.png)
 
+![ROC](image/6.png)
+
 真偽用戶歐幾里得距離分布圖：
 
-![距離分布圖](image/6.png)
+![距離分布圖](image/7.png)
 
 在找到 EER 的閾值下，有多少真偽用戶正確跟錯誤訪問系統：
 
-![矩陣](image/7.png)
+![矩陣](image/8.png)
 
 ---
 
